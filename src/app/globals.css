@@ -1,0 +1,47 @@
+@config "../../tailwind.config.ts";
+
+/* 2025-11-03T00:15:00-05:00 - Point Tailwind at TypeScript config to load custom tokens. */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* 2025-11-02T22:48:30-05:00 - Bridging tailwind theme tokens to CSS custom properties. */
+@theme inline {
+  --background: var(--color-background);
+  --foreground: var(--color-foreground);
+  --card: var(--color-card);
+  --card-foreground: var(--color-card-foreground);
+  --popover: var(--color-card);
+  --popover-foreground: var(--color-card-foreground);
+  --primary: var(--color-primary);
+  --primary-foreground: var(--color-primary-foreground);
+  --secondary: var(--color-secondary);
+  --secondary-foreground: var(--color-secondary-foreground);
+  --muted: var(--color-muted);
+  --muted-foreground: var(--color-muted-foreground);
+  --accent: var(--color-accent);
+  --accent-foreground: var(--color-accent-foreground);
+  --border: var(--color-border);
+  --input: var(--color-border);
+  --ring: var(--color-ring);
+}
+
+/* 2025-11-02T22:48:30-05:00 - Maintaining radius scale while colors derive from tokens. */
+:root {
+  color-scheme: light;
+  --radius: 0.625rem;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
