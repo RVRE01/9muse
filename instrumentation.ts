@@ -1,12 +1,16 @@
 import type { Instrumentation } from "next";
-import { logUnhandledError, serverLogger } from "@/lib/logging/server";
+
+const logInfo = (message: string, metadata?: Record<string, unknown>) => {
+  console.info(message, metadata);
+};
+
+const logError = (message: string, metadata?: Record<string, unknown>) => {
+  console.error(message, metadata);
+};
 
 export const register = async () => {
   if (process.env.NEXT_RUNTIME === "nodejs") {
-    await import("pino");
-    await import("next-logger");
-
-    serverLogger.info("nexlog instrumentation registered", {
+    logInfo("instrumentation registered", {
       environment: process.env.NODE_ENV,
       runtime: process.env.NEXT_RUNTIME,
     });
@@ -18,7 +22,8 @@ export const onRequestError: Instrumentation.onRequestError = async (
   request,
   context,
 ) => {
-  logUnhandledError(error, {
+  logError("Unhandled exception", {
+    error,
     path: request?.path,
     method: request?.method,
     routerKind: context?.routerKind,
