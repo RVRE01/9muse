@@ -7,7 +7,7 @@ export function StructuredData() {
     '@id': `${siteUrl}/#organization`,
     name: '9 Muse Customs',
     url: siteUrl,
-    logo: `${siteUrl}/Imgs/9muse-logo-badge.png`,
+    logo: `${siteUrl}/Imgs/9Muse Customs_logo2026.png`,
     description: siteDescription,
     areaServed: [
       { '@type': 'State', name: 'New York' },
@@ -64,4 +64,3 @@ export function StructuredData() {
     </>
   );
 }
-

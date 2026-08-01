@@ -66,7 +66,7 @@
 }
 
 .brandMark {
-  width: 48px;
+  width: 34px;
   height: 34px;
   object-fit: contain;
 }
@@ -476,9 +476,11 @@
 }
 
 .capabilityBand {
-  border-top: 1px solid rgba(239, 64, 42, 0.38);
-  border-bottom: 1px solid var(--border-subtle);
-  background: #0c0f12;
+  border-top: 1px solid #b53024;
+  border-bottom: 1px solid #b53024;
+  background:
+    linear-gradient(rgba(24, 4, 5, 0.18), rgba(24, 4, 5, 0.18)),
+    url('/Imgs/texture-burgundy-cherry-wood.png') center / cover;
   padding: 28px max(24px, calc((100vw - var(--content-width)) / 2));
 }
 
@@ -492,8 +494,8 @@
   min-height: 28px;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid var(--border-subtle);
-  color: var(--silver-accent);
+  border-right: 1px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff;
   font-size: 0.74rem;
   font-weight: 800;
   text-align: center;
@@ -506,7 +508,7 @@
 
 .capabilityBand > p {
   margin: 22px 0 0;
-  color: #7f8995;
+  color: rgba(255, 255, 255, 0.78);
   font-size: 0.72rem;
   text-align: center;
   text-transform: uppercase;
@@ -583,7 +585,7 @@
 .servicesIntroSubtext,
 .sectionIntro > p,
 .processHeading > p,
-.coverageCopy > p,
+.coverageDetails > p,
 .filmCopy > p,
 .faqHeading > p,
 .inquiryHeading > p {
@@ -596,9 +598,8 @@
 .serviceIndex {
   margin-top: 70px;
   display: grid;
+  gap: 12px;
   grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--border-strong);
-  border-bottom: 1px solid var(--border-strong);
 }
 
 .serviceIndexReveal {
@@ -613,7 +614,8 @@
   grid-template-rows: minmax(150px, 1fr) auto;
   align-content: stretch;
   gap: 26px 12px;
-  border-right: 1px solid var(--border-subtle);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: #050607;
   color: var(--text-primary);
   padding: 22px 24px 24px;
   font-weight: 700;
@@ -622,21 +624,17 @@
     color 180ms ease;
 }
 
-.serviceIndex a:last-child {
-  border-right: 0;
-}
-
 .serviceIndexIcon {
   position: relative;
-  grid-column: 1;
+  grid-column: 1 / -1;
   grid-row: 1;
   display: block;
-  width: min(100%, 160px);
-  aspect-ratio: 1;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  border: 1px solid rgba(174, 181, 191, 0.18);
+  border: 2px solid var(--brand-red);
   border-radius: var(--control-radius);
-  background: #0a0c0f;
+  background: #030405;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.12),
     0 18px 38px rgba(0, 0, 0, 0.28);
@@ -645,6 +643,10 @@
 .serviceIndexIcon img {
   object-fit: cover;
   transition: transform 520ms cubic-bezier(0.2, 0.72, 0.24, 1);
+}
+
+.serviceIndexIcon::after {
+  display: none;
 }
 
 .serviceIndexLabel {
@@ -661,13 +663,16 @@
 .serviceIndex a svg {
   grid-column: 2;
   grid-row: 2;
+  width: 34px;
+  height: 34px;
   align-self: end;
   color: var(--brand-red);
+  stroke-width: 1.45;
   transition: transform 180ms ease;
 }
 
 .serviceIndex a:hover {
-  background: rgba(239, 64, 42, 0.08);
+  background: #0c0f12;
 }
 
 .serviceIndex a:hover .serviceIndexIcon img {
@@ -731,7 +736,7 @@
   width: min(100% - 48px, var(--content-width));
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(360px, 0.82fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
   gap: clamp(52px, 7vw, 112px);
   padding: var(--section-spacing) 0;
@@ -1163,10 +1168,14 @@
 }
 
 .coverageCopy {
-  align-self: center;
-  max-width: 670px;
-  margin-left: max(24px, calc((100vw - var(--content-width)) / 2));
-  padding: 130px 24px 130px 0;
+  width: min(calc(100% - 48px), var(--content-width));
+  max-width: none;
+  margin: 0 auto;
+  padding: 130px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.78fr);
+  align-items: center;
+  gap: clamp(48px, 8vw, 140px);
   pointer-events: auto;
   opacity: 0;
   transform: translateY(28px);
@@ -1185,8 +1194,13 @@
   margin-bottom: 30px;
 }
 
-.coverageCopy > p {
+.coverageDetails {
+  max-width: 640px;
+}
+
+.coverageDetails > p {
   margin-bottom: 17px;
+  text-align: justify;
 }
 
 .coverageProof {
@@ -1744,8 +1758,8 @@
 }
 
 .footerBrand img {
-  width: 62px;
-  height: 42px;
+  width: 54px;
+  height: 54px;
   object-fit: contain;
 }
 
@@ -1861,7 +1875,7 @@
   }
 
   .serviceInner {
-    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.85fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 54px;
   }
 
@@ -1945,7 +1959,7 @@
   .capabilityInner span {
     min-height: 30px;
     border-right: 0;
-    border-bottom: 1px solid var(--border-subtle);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.28);
     padding: 0 10px 12px;
   }
 
@@ -1964,6 +1978,7 @@
     grid-auto-flow: column;
     grid-auto-columns: minmax(210px, 42vw);
     grid-template-columns: none;
+    gap: 12px;
     overflow-x: auto;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
@@ -1977,7 +1992,7 @@
   }
 
   .serviceIndexIcon {
-    width: 128px;
+    width: 100%;
   }
 
   .serviceIndexLabel {
@@ -2073,10 +2088,18 @@
   }
 
   .coverageCopy {
+    width: min(calc(100% - 48px), 680px);
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 100px 0 88px;
+  }
+
+  .coverageDetails {
     max-width: none;
-    width: min(100%, 680px);
-    margin-left: 0;
-    padding: 100px 24px 88px;
+  }
+
+  .coverageDetails > p {
+    text-align: left;
   }
 
   .filmSection {
@@ -2102,8 +2125,8 @@
 
 @media (max-width: 640px) {
   .brandMark {
-    width: 42px;
-    height: 30px;
+    width: 34px;
+    height: 34px;
   }
 
   .hero {
@@ -2174,7 +2197,7 @@
   }
 
   .serviceIndexIcon {
-    width: 116px;
+    width: 100%;
   }
 
   .serviceInner {
@@ -2225,7 +2248,8 @@
   }
 
   .coverageCopy {
-    padding: 100px 20px 72px;
+    width: calc(100% - 40px);
+    padding: 100px 0 72px;
   }
 
   .filmPoster {

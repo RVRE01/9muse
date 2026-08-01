@@ -45,10 +45,10 @@ export function SiteHeader() {
           onClick={() => setOpen(false)}
         >
           <Image
-            src="/Imgs/9muse-logo-badge.png"
+            src="/Imgs/9Muse Customs_logo2026.png"
             alt=""
-            width={1156}
-            height={698}
+            width={764}
+            height={764}
             className={styles.brandMark}
             priority
           />

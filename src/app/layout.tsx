@@ -46,10 +46,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/Imgs/9muse-logo-badge.png', type: 'image/png' },
+      { url: '/Imgs/9Muse Customs_logo2026.png', type: 'image/png' },
       { url: '/favicon.ico' },
     ],
-    apple: '/Imgs/9muse-logo-badge.png',
+    apple: '/Imgs/9Muse Customs_logo2026.png',
   },
   robots: {
     index: true,

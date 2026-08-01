@@ -9,10 +9,10 @@ export function SiteFooter() {
       <div className={styles.footerTop}>
         <div className={styles.footerBrand}>
           <Image
-            src="/Imgs/9muse-logo-badge.png"
+            src="/Imgs/9Muse Customs_logo2026.png"
             alt=""
-            width={1156}
-            height={698}
+            width={764}
+            height={764}
           />
           <div>
             <strong>9 Muse Customs</strong>
