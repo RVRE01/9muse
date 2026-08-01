@@ -1,0 +1,537 @@
+{
+  "document_version": "1.0.0",
+  "document_purpose": "LLM-readable site framework for the 9 Muse Customs website. This file describes the current branding, SEO direction, layout system, CSS logic, media treatment, interaction patterns, and extension rules so another model can expand the site with additional content while preserving its design language.",
+  "project": {
+    "name": "9 Muse Customs",
+    "site_type": "premium automotive custom-build showcase",
+    "implementation_stack": {
+      "framework": "Next.js App Router",
+      "ui": "React",
+      "styling": "CSS Modules plus global CSS token bridge",
+      "theme_runtime": "next-themes",
+      "icons": "lucide-react",
+      "primary_entrypoints": [
+        "src/app/page.tsx",
+        "src/components/premium-wireframe/PremiumWireframe.tsx",
+        "src/components/premium-wireframe/PremiumWireframe.module.css",
+        "src/app/layout.tsx",
+        "src/app/globals.css"
+      ]
+    }
+  },
+  "site_identity": {
+    "brand_name": "9 Muse Customs",
+    "brand_short_name": "9MUSE",
+    "category": "custom automotive performance and luxury build studio",
+    "core_offer": "Premium custom performance builds with carbon aero, leather trim, signature red accents, and a concierge-style build request path.",
+    "brand_pillars": [
+      "custom performance craftsmanship",
+      "premium material storytelling",
+      "cinematic presentation",
+      "private concierge inquiry flow",
+      "high-contrast luxury presentation"
+    ],
+    "tone": {
+      "voice": "confident, premium, technical, cinematic, concise",
+      "avoid": [
+        "generic dealership language",
+        "cheap tuner-shop tone",
+        "overly playful copy",
+        "corporate SaaS phrasing",
+        "fluffy luxury cliches without product detail"
+      ],
+      "preferred_copy_shape": [
+        "short uppercase eyebrow",
+        "bold headline",
+        "supporting paragraph with craftsmanship and material specificity",
+        "clear CTA when relevant"
+      ]
+    }
+  },
+  "seo_framework": {
+    "current_metadata": {
+      "title": "9MUSE Premium Wireframe",
+      "description": "Premium red, black, and silver responsive product wireframe with media placeholders."
+    },
+    "recommended_brand_metadata": {
+      "title_pattern": "9 Muse Customs | Premium Carbon, Leather, and Performance Builds",
+      "meta_description_pattern": "9 Muse Customs creates premium custom automotive builds with carbon aero, tailored leather interiors, signature red accents, and a private inquiry-led process.",
+      "homepage_h1": "9 Muse Customs"
+    },
+    "primary_keywords": [
+      "custom car builds",
+      "performance car customization",
+      "carbon fiber aero",
+      "custom leather interior",
+      "luxury automotive customization",
+      "widebody performance build",
+      "bespoke automotive design",
+      "premium custom shop"
+    ],
+    "secondary_keywords": [
+      "signature builds",
+      "private build request",
+      "carbon and leather detailing",
+      "custom performance concept",
+      "automotive film showcase",
+      "build gallery",
+      "atelier-style vehicle customization"
+    ],
+    "content_strategy": {
+      "intent_profile": [
+        "brand discovery",
+        "custom build inspiration",
+        "credibility and visual trust",
+        "high-ticket inquiry conversion"
+      ],
+      "homepage_role": "Brand-first cinematic landing page that introduces materials, craftsmanship, visual proof, and a premium inquiry path.",
+      "section_level_search_targets": [
+        {
+          "section": "hero",
+          "intent": "brand introduction and value proposition"
+        },
+        {
+          "section": "craft",
+          "intent": "custom craftsmanship credibility"
+        },
+        {
+          "section": "materials",
+          "intent": "carbon and leather specialization"
+        },
+        {
+          "section": "gallery",
+          "intent": "visual evidence and portfolio scanning"
+        },
+        {
+          "section": "inquiry",
+          "intent": "conversion for private build leads"
+        }
+      ],
+      "future_expandable_content_types": [
+        "project case studies",
+        "build process overview",
+        "service pages for aero, interior, exterior, and concept packages",
+        "FAQ on custom build process",
+        "materials library pages",
+        "individual gallery/project detail pages"
+      ]
+    },
+    "structured_data_recommendations": [
+      "Organization schema for 9 Muse Customs",
+      "LocalBusiness or AutomotiveBusiness schema if address and service area exist",
+      "VideoObject schema for hero or featured films if hosted media metadata is available",
+      "ImageObject coverage for major gallery or case-study assets",
+      "FAQPage schema only if real FAQ content is added"
+    ]
+  },
+  "visual_system": {
+    "design_intent": "The site should feel like a premium automotive atelier: dark metal, carbon weave, leather trim, cinematic imagery, and a restrained but aggressive red accent system.",
+    "themes": {
+      "light_mode": {
+        "mood": "silver, clean, technical, high-end studio lighting",
+        "base_surface_direction": "light silver and white surfaces with dark ink text and red accents"
+      },
+      "dark_mode": {
+        "mood": "black, carbon, leather, cinematic, high-contrast luxury",
+        "base_surface_direction": "near-black layered surfaces with silver text hierarchy and red accent contrast"
+      }
+    },
+    "core_palette": {
+      "logo_red": "#EF402A",
+      "primary_dark": "#08090B",
+      "deep_surface_dark": "#11151A",
+      "light_background": "#F4F5F7",
+      "light_background_deep": "#DFE3E8",
+      "silver": "#AEB5BF",
+      "bright_silver": "#D9DDE3"
+    },
+    "semantic_color_roles": {
+      "red_usage": [
+        "eyebrows",
+        "primary buttons",
+        "active segmented controls",
+        "focus states",
+        "accent gradients and glow details"
+      ],
+      "dark_usage": [
+        "hero base",
+        "media frames",
+        "dark sections",
+        "overlay foundations"
+      ],
+      "silver_usage": [
+        "light-theme page fields",
+        "secondary gradients",
+        "stat framing",
+        "luxury technical surfaces"
+      ]
+    },
+    "materials_language": {
+      "carbon": "cold, technical, exterior-focused, used for aero and performance storytelling",
+      "leather": "warm, tactile, interior-focused, used for upholstery and concierge luxury storytelling",
+      "alternation_rule": "Adjacent page folds should alternate between carbon-led and leather-led visual cues so the page does not become flat or repetitive."
+    },
+    "image_direction": {
+      "preferred_subjects": [
+        "custom performance coupes",
+        "widebody or aero details",
+        "wheels and brakes",
+        "trim closeups",
+        "interior detail or stitch cues",
+        "cinematic studio vehicle shots"
+      ],
+      "image_treatment": [
+        "full-bleed crop inside media frames",
+        "grey multiply or dark overlay for legibility when text sits on top",
+        "object-fit: cover",
+        "high contrast but not cartoonishly oversaturated"
+      ],
+      "avoid": [
+        "stock-photo feel",
+        "blank illustration-only sections",
+        "generic abstract backgrounds in place of real vehicles",
+        "low-contrast hero media"
+      ]
+    }
+  },
+  "css_and_token_model": {
+    "styling_architecture": {
+      "global_layer": "src/app/globals.css bridges theme tokens into CSS custom properties used by Tailwind and global base styles.",
+      "page_layer": "PremiumWireframe.module.css owns most of the final visual identity for the homepage.",
+      "theme_provider": "ThemeRootProvider injects theme and style variables via data attributes on the document element."
+    },
+    "page_level_custom_properties": {
+      "scope": ".shell in PremiumWireframe.module.css",
+      "important_tokens": [
+        "--lux-bg",
+        "--lux-bg-deep",
+        "--lux-surface",
+        "--lux-surface-solid",
+        "--lux-surface-strong",
+        "--lux-ink",
+        "--lux-muted",
+        "--lux-line",
+        "--lux-line-strong",
+        "--lux-red",
+        "--lux-red-deep",
+        "--lux-red-hot",
+        "--lux-on-red",
+        "--lux-silver",
+        "--lux-silver-bright",
+        "--lux-shadow",
+        "--lux-hero-overlay",
+        "--lux-focus",
+        "--lux-page-gradient",
+        "--lux-fold-gradient",
+        "--radius-panel",
+        "--radius-control",
+        "--radius-media"
+      ]
+    },
+    "shape_system": {
+      "radius_modes": {
+        "none": {
+          "panel": "0",
+          "control": "0",
+          "media": "0"
+        },
+        "slight": {
+          "panel": "10px",
+          "control": "12px",
+          "media": "14px"
+        },
+        "heavy": {
+          "panel": "28px",
+          "control": "999px",
+          "media": "34px"
+        }
+      },
+      "usage_rule": "Panels, media frames, controls, navigation chips, and overlays all inherit from the shared radius variables so the whole site changes as one system."
+    },
+    "surface_pattern": {
+      "base_surface_formula": "Most cards and tool surfaces combine a translucent or mixed gradient layer with a texture image and a border line.",
+      "common_surface_characteristics": [
+        "1px border line",
+        "soft shadow",
+        "glass-like or layered gradient",
+        "carbon or leather texture background",
+        "backdrop blur where floating or over media"
+      ]
+    },
+    "background_logic": {
+      "global_page": "Gradient-driven page background with a subtle repeating technical line pattern.",
+      "dark_mode_global": "Dark gradient plus carbon texture at the page level.",
+      "section_folds": "Folds use either carbon texture or leather texture depending on material intent.",
+      "parallax_fold": "Leather fold uses fixed background attachment on large screens and falls back to scroll on small screens."
+    },
+    "contrast_rules": [
+      "All headline-on-media sections require a dark scrim or multiply overlay.",
+      "Dark mode body copy should lean toward silver-grey rather than pure white for hierarchy.",
+      "Red is reserved for emphasis and control activation, not large body text blocks.",
+      "Glass and overlay surfaces still need explicit text color declarations for both themes."
+    ]
+  },
+  "layout_framework": {
+    "page_width": "Most content bands constrain to 1480px max width with responsive inner padding.",
+    "navigation_pattern": {
+      "header": "sticky branded header with logo, nav links, and a right-side CTA",
+      "subnav": "secondary sticky anchor bar just below header",
+      "section_ids": [
+        "overview",
+        "craft",
+        "materials",
+        "gallery",
+        "inquiry"
+      ]
+    },
+    "section_order": [
+      {
+        "id": "hero",
+        "purpose": "brand statement and cinematic first impression"
+      },
+      {
+        "id": "stat_band",
+        "purpose": "quick numeric/spec brand cues"
+      },
+      {
+        "id": "craft",
+        "purpose": "craftsmanship chapter with supporting image"
+      },
+      {
+        "id": "feature_grid",
+        "purpose": "three capability/value cards"
+      },
+      {
+        "id": "leather_parallax_fold",
+        "purpose": "mood-setting premium material transition"
+      },
+      {
+        "id": "materials",
+        "purpose": "paired carbon and leather panels"
+      },
+      {
+        "id": "motion",
+        "purpose": "featured film presentation"
+      },
+      {
+        "id": "gallery",
+        "purpose": "image-led visual matrix"
+      },
+      {
+        "id": "inquiry",
+        "purpose": "conversion panel plus build preferences card"
+      }
+    ],
+    "section_composition_rules": [
+      "Alternate dense dark folds and lighter technical folds for rhythm.",
+      "Use wide full-width section bands rather than stacking many small centered cards.",
+      "Keep major imagery at section scale, not tiny thumbnails.",
+      "When a section has copy and media, the layout should usually be split into a copy column and a media object column."
+    ]
+  },
+  "component_patterns": {
+    "hero": {
+      "structure": [
+        "video background iframe",
+        "hero scrim overlay",
+        "single-column copy grid",
+        "primary CTA",
+        "secondary film CTA"
+      ],
+      "look_and_feel": "cinematic, bold, full-width, high-contrast, logo-first",
+      "expansion_rules": [
+        "Keep the H1 concise and brand-led.",
+        "Keep the supporting paragraph under roughly three sentences.",
+        "If additional proof is needed, use compact stat cards or micro-badges rather than cluttering the hero."
+      ]
+    },
+    "stat_cards": {
+      "role": "Quick proof and visual shorthand.",
+      "shape": "three-card band with icon, large value, small label",
+      "content_types": [
+        "signature build count",
+        "package count",
+        "brand color code",
+        "atelier process steps",
+        "service availability"
+      ]
+    },
+    "chapter_split_section": {
+      "role": "Explain one core brand dimension beside a strong image.",
+      "layout": "copy on one side, framed image on the other",
+      "best_use_cases": [
+        "craft",
+        "process chapter",
+        "specialty package intro",
+        "case-study intro block"
+      ]
+    },
+    "feature_cards": {
+      "role": "Summarize premium service modules",
+      "count": "prefer 3 per row on desktop",
+      "content_pattern": [
+        "small labeled pill",
+        "medium headline",
+        "short explanatory paragraph"
+      ]
+    },
+    "material_panels": {
+      "role": "Material storytelling blocks with imagery and overlays",
+      "required_features": [
+        "image background",
+        "grey/dark multiply overlay for readability",
+        "watermark or subtle brand mark",
+        "headline and paragraph anchored over media"
+      ]
+    },
+    "motion_section": {
+      "role": "Feature a hero film or campaign video as a premium object, not just a plain embed.",
+      "behavior": [
+        "display a still frame or thumbnail card",
+        "use a centered play disc",
+        "open the YouTube video in a lightbox dialog"
+      ]
+    },
+    "gallery_grid": {
+      "role": "Visual proof and aesthetic scanning",
+      "pattern": "asymmetrical image matrix with one emphasized larger item",
+      "rules": [
+        "every image tile should have a readable label chip",
+        "hover may scale imagery slightly",
+        "maintain object-fit cover and a strong dark bottom gradient for labels"
+      ]
+    },
+    "inquiry_panel": {
+      "role": "Conversion and premium build-preference framing",
+      "structure": [
+        "conversion copy block",
+        "adjacent framed panel",
+        "swatch or preference indicators",
+        "short feature checklist",
+        "clear CTA"
+      ]
+    },
+    "floating_toolbox": {
+      "role": "Display controls without occupying primary header space",
+      "position": "bottom-right fixed dock",
+      "behavior": [
+        "collapsed by default",
+        "expands into a floating panel",
+        "includes theme mode switch",
+        "includes edge radius switch",
+        "surfaces a few spec metrics"
+      ]
+    }
+  },
+  "interaction_model": {
+    "theme_switching": {
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "default_behavior": "The theme provider defaults to dark mode while still supporting system resolution.",
+      "page_expectation": "Both themes should preserve the same layout and brand hierarchy, not become two different designs."
+    },
+    "radius_switching": {
+      "modes": [
+        "none",
+        "slight",
+        "heavy"
+      ],
+      "user_value": "Lets the same premium layout feel sharper or softer without changing overall composition."
+    },
+    "video_behavior": {
+      "hero": "Autoplaying muted YouTube background video used for atmosphere.",
+      "chapter_media": "Still video poster presented as a clickable premium media object.",
+      "lightbox": "Video opens in modal/lightbox rather than taking the user away to YouTube."
+    },
+    "accessibility": {
+      "existing_patterns": [
+        "skip link",
+        "aria labels on landmark sections and nav",
+        "focus-visible styling",
+        "keyboard close behavior for lightbox via Escape",
+        "reduced motion media query"
+      ],
+      "future_rules": [
+        "preserve strong contrast on text over media",
+        "maintain semantic heading order",
+        "ensure CTA buttons remain keyboard reachable",
+        "do not rely on texture alone for distinction"
+      ]
+    }
+  },
+  "content_structure_for_llm_expansion": {
+    "default_section_template": {
+      "eyebrow": "short uppercase signal phrase",
+      "headline": "bold premium claim with material or build specificity",
+      "body": "1 to 3 concise sentences grounded in craftsmanship, materials, process, or outcomes",
+      "supporting_media": "image, video still, or gallery frame tied directly to the section claim",
+      "cta": "only include when the section naturally leads to action"
+    },
+    "approved_content_directions": [
+      "carbon aero packages",
+      "interior leather craftsmanship",
+      "signature build concepts",
+      "gallery chapters by angle or subsystem",
+      "process and concierge experience",
+      "case-study narratives with build details"
+    ],
+    "expansion_rules": [
+      "Preserve the carbon-versus-leather alternation across major folds.",
+      "Do not insert generic marketing sections that ignore the material language.",
+      "New sections should usually map to one visual mood: technical carbon, tactile leather, cinematic motion, or luxury consultation.",
+      "Keep large sections image-led; do not let text dominate the entire page without media support.",
+      "Use red sparingly as an accent, never as a full-page dominant wash.",
+      "When adding cards, keep the typography compact and structured for scanning.",
+      "When adding long-form content, break it into premium folds rather than one uninterrupted article block."
+    ],
+    "content_do_not_rules": [
+      "Do not turn the site into a generic car dealer template.",
+      "Do not use pastel palettes or soft lifestyle-brand visuals.",
+      "Do not add oversized rounded cards everywhere unless the selected radius mode calls for it.",
+      "Do not replace real vehicle imagery with abstract graphics when proof imagery is available.",
+      "Do not overload the hero with too many messages, bullets, or logos."
+    ]
+  },
+  "asset_map": {
+    "logos": [
+      "/Imgs/9muse-logo-badge.png",
+      "/Imgs/9muse-logo-mark.png",
+      "/Imgs/9Muse Customs_Finals-01.png",
+      "/Imgs/9Muse Customs_Finals-05.png"
+    ],
+    "textures": [
+      "/Imgs/texture-carbon-fiber.png",
+      "/Imgs/texture-black-leather-red-stitch.png"
+    ],
+    "hero_related_media": [
+      "YouTube video id bg1hDxHnj4g",
+      "/Imgs/hero-youtube-O8JViUIYkNY.jpg"
+    ],
+    "chapter_video": [
+      "YouTube video id z5kNEvZ_MMM"
+    ],
+    "gallery_and_material_images": [
+      "/Imgs/magnific_create-a-cinematic-closeu_tfTpu3MmZJ.png",
+      "/Imgs/magnific_create-a-premium-closeup-_5xhCsRLKxe.png",
+      "/Imgs/magnific_generate-a-set-of-luxury-_LUQbwVcswO.png",
+      "/Imgs/magnific_create-a-premium-closeup-_Uy5rPHSwny.png",
+      "/Imgs/magnific_generate-a-luxury-automot_YV93p7XWeC.png",
+      "/Imgs/magnific_create-a-premium-automoti_hEMdFMsvqL.png",
+      "/Imgs/magnific_generate-a-luxury-automot_SOb1yf4Ub8.png"
+    ]
+  },
+  "llm_handoff_summary": {
+    "what_this_site_is": "A premium single-page automotive customization brand site built around cinematic media, carbon-versus-leather material storytelling, and a private inquiry path.",
+    "what_must_remain_true": [
+      "Brand remains centered on 9 Muse Customs.",
+      "Color scheme remains red, black, and silver/grey.",
+      "Layout stays premium, image-forward, and high contrast.",
+      "Dark and light themes use the same structural system.",
+      "Section rhythm alternates technical and tactile material moods.",
+      "The site should feel like an atelier or custom build studio, not a generic commerce template."
+    ],
+    "how_to_expand": "Add new content as branded folds or chapters that preserve the existing hierarchy: eyebrow, bold headline, concise proof-focused copy, premium media, and a controlled CTA when needed. Reuse existing color tokens, radius variables, media framing, and texture logic rather than inventing new design languages."
+  }
+}
